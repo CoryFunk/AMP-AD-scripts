@@ -4,7 +4,7 @@
 
 # index transcripts
 # create a list of genes from the first column of the snapr output
-open FILE,"meta/mouse_gene_list.txt" or die;
+open FILE,"mouse_gene_list.txt" or die;
 $i=0;
 %iso2id=();
 %id2iso=();
@@ -22,7 +22,7 @@ $niso=$i;
 
 # main
 # directory of all the files to be combined
-@all=glob "star_output/*PerGene*";
+@all=glob "/local/Cory/Alzheimers/cerebellum/*.txt";
 $j=0;
 %expr=();
 %run2id=();
@@ -62,7 +62,7 @@ $nrun=$j;
 # write
 print "writing to file...\n";
 #this is the name of the output file
-open NEW,"> results/app_genecounts_by_star.txt" or die;
+open NEW,"> results/AMP-AD_MayoRNAseq_UFL-Mayo-ISB_mRNA_Alzheimers_Disease_IlluminaHiSeq2000_CBE_geneExp_raw_count_Homo_sapiens" or die;
 # print header
 foreach $i (0..$nrun-2){
         print NEW "$id2run{$i}\t";
