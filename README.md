@@ -1,2 +1,3 @@
 # AMP-AD-scripts
-AMP scripts
+AMP script
+w00t
