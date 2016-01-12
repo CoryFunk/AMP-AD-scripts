@@ -1,7 +1,6 @@
 library(edgeR)
-#setwd("/local/Cory/Alzheimers/synapse/sinai/")
-countsexon="sinai_counts.txt"
-countsnormalized="sinai_count_TMMnormalized_CPM.txt"
+countsexon="read_counts.txt"
+countsnormalized="read_count_TMMnormalized_CPM.txt"
 counts=as.matrix(read.table(countsexon,check.names = F, header = T))
 
 dge=DGEList(as.numeric(counts))
